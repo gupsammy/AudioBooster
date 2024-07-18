@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Audio Booster</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Audio Booster</h1>
+      </header>
+
+      <main>
+        <canvas id="visualizer"></canvas>
+
+        <div id="controls">
+          <div class="control-group">
+            <label class="switch">
+              <input type="checkbox" id="boostToggle" />
+              <span class="slider"></span>
+            </label>
+            <span>Enable Audio Boost</span>
+          </div>
+
+          <div class="control-group slider-container">
+            <label for="volumeBoost"
+              >Volume Boost: <span id="boostValue">1x</span></label
+            >
+            <input
+              type="range"
+              id="volumeBoost"
+              min="1"
+              max="20"
+              value="1"
+              step="0.1"
+            />
+          </div>
+
+          <div class="control-group">
+            <label class="switch">
+              <input type="checkbox" id="noiseReduction" />
+              <span class="slider"></span>
+            </label>
+            <span>Enable Noise Reduction</span>
+          </div>
+        </div>
+      </main>
+
+      <div id="error-message">
+        No audio detected on this page. Audio Booster is unavailable.
+      </div>
+
+      <footer>
+        <p>Audio Booster v1.2</p>
+      </footer>
+    </div>
+
+    <script src="visualizer.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
